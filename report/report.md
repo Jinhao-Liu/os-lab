@@ -99,9 +99,9 @@ make install
 
 **最终结果：**
 
-- ✅ 编译通过（`make` 生成 `bin/kernel`、`bin/ucore.img`）
-- ✅ `make qemu` 输出与指导书一致：`OpenSBI v0.4`、`Firmware Base : 0x80000000`、`Runtime SBI Version : 0.1`，随后内核打印 `(THU.CST) os is loading ...`
-- ✅ 功能符合预期
+- 编译通过（`make` 生成 `bin/kernel`、`bin/ucore.img`）
+- `make qemu` 输出与指导书一致：`OpenSBI v0.4`、`Firmware Base : 0x80000000`、`Runtime SBI Version : 0.1`，随后内核打印 `(THU.CST) os is loading ...`
+- 功能符合预期
 
 **关键改进点总结：**
 1. 系统软件实验对**工具链版本**高度敏感：模拟器/固件版本决定了 SBI 等底层接口的可用性，"能跑"和"按规范跑"是两回事；
