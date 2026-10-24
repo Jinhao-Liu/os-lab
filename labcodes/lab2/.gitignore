@@ -1,9 +1,0 @@
-/bin/
-/obj/
-.DS_Store
-__pycache__/
-*.pyc
-.gdb.in
-.qemu.out
-cscope*
-tags
