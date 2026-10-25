@@ -3,10 +3,11 @@
 本目录包含物理页初始化、Best-Fit、Buddy 和简化 SLUB 的代码与测试。
 当前内核选择 Buddy 作为页分配器，SLUB 在其上提供 kmalloc/kfree。
 
+- [提示词汇总](prompt.md)：四个模块的 spec 与六份实现、测试提示词。
 - [实验报告](实验报告.md)：整体逻辑、实现分析、spec/prompt、问题处理和验证结果。
 - [思考题](思考题.md)：三个思考题的简答。
-- Buddy 提示词：tools/buddy_prompts.md。
-- SLUB 提示词：tools/slub_prompts.md；完整整理版本见实验报告第六节。
+- [Buddy 实现与测试提示词](tools/buddy_prompts.md)。
+- [SLUB 实现与测试提示词](tools/slub_prompts.md)。
 
 ## 宿主机测试
 
