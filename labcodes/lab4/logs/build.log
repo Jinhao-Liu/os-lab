@@ -1,0 +1,79 @@
+rm -f -r obj bin
++ cc kern/init/entry.S
++ cc kern/init/init.c
++ cc kern/libs/readline.c
++ cc kern/libs/stdio.c
++ cc kern/debug/kdebug.c
++ cc kern/debug/kmonitor.c
++ cc kern/debug/panic.c
++ cc kern/driver/clock.c
++ cc kern/driver/console.c
++ cc kern/driver/dtb.c
++ cc kern/driver/intr.c
++ cc kern/driver/picirq.c
++ cc kern/trap/trap.c
++ cc kern/trap/trapentry.S
++ cc kern/mm/default_pmm.c
++ cc kern/mm/kmalloc.c
++ cc kern/mm/pmm.c
++ cc kern/mm/vmm.c
++ cc kern/process/entry.S
++ cc kern/process/proc.c
++ cc kern/process/switch.S
++ cc kern/schedule/sched.c
++ cc libs/hash.c
++ cc libs/printfmt.c
++ cc libs/string.c
++ ld bin/kernel
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/init/init.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/libs/readline.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/libs/stdio.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/debug/kdebug.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/debug/kmonitor.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.rodata.__warn.str1.8' in file 'obj/kern/debug/panic.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.__warn' in file 'obj/kern/debug/panic.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.is_kernel_panic' in file 'obj/kern/debug/panic.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/debug/panic.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/driver/clock.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.kbd_intr' in file 'obj/kern/driver/console.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.serial_intr' in file 'obj/kern/driver/console.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/driver/console.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/driver/dtb.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/driver/intr.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.pic_enable' in file 'obj/kern/driver/picirq.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/driver/picirq.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.trap_in_kernel' in file 'obj/kern/trap/trap.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/trap/trap.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/mm/default_pmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.slob_init' in file 'obj/kern/mm/kmalloc.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.slob_allocated' in file 'obj/kern/mm/kmalloc.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.kallocated' in file 'obj/kern/mm/kmalloc.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.ksize' in file 'obj/kern/mm/kmalloc.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/mm/kmalloc.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.tlb_invalidate' in file 'obj/kern/mm/pmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/mm/pmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.rodata.print_vma.str1.8' in file 'obj/kern/mm/vmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.print_vma' in file 'obj/kern/mm/vmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.rodata.print_mm.str1.8' in file 'obj/kern/mm/vmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.print_mm' in file 'obj/kern/mm/vmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.mm_create' in file 'obj/kern/mm/vmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.vma_create' in file 'obj/kern/mm/vmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.mm_destroy' in file 'obj/kern/mm/vmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/mm/vmm.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.set_proc_name' in file 'obj/kern/process/proc.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.get_proc_name' in file 'obj/kern/process/proc.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.find_proc' in file 'obj/kern/process/proc.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/process/proc.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/kern/schedule/sched.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/libs/hash.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.sprintputch' in file 'obj/libs/printfmt.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.snprintf' in file 'obj/libs/printfmt.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.vsnprintf' in file 'obj/libs/printfmt.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/libs/printfmt.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.strncpy' in file 'obj/libs/string.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.strfind' in file 'obj/libs/string.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.strtol' in file 'obj/libs/string.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.memmove' in file 'obj/libs/string.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.text.memcmp' in file 'obj/libs/string.o'
+/usr/bin/riscv64-linux-gnu-ld.bfd: removing unused section '.eh_frame' in file 'obj/libs/string.o'
+riscv64-linux-gnu-objcopy bin/kernel --strip-all -O binary bin/ucore.img

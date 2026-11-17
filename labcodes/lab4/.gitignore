@@ -1,0 +1,8 @@
+/bin/
+/obj/
+/.gdb.in
+/.qemu.out
+/projlab4-handin.tar.gz
+__pycache__/
+cscope*
+tags
